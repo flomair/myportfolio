@@ -1,0 +1,130 @@
+@charset 'utf-8';
+@import 'settings';
+@import 'foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+
+@include foundation-typography;
+
+a {
+    color: $dark-gray;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 5px solid $medium-gray;
+    // background-color: red;
+    margin: 25px 0 26px;
+    padding-top: 20px;
+
+    @include breakpoint(medium down) {
+        margin: 10px 0 12px;
+        padding-top: 10px;
+    }
+
+    @include breakpoint(small down) {
+        margin: 10px 0 0px;
+        padding-top: 10px;
+    }
+}
+
+.logo {
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 4em;
+    }
+}
+
+.title-b,
+.title-s {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.title-b {
+    font-size: 4em;
+    font-weight: 300;
+    margin: 0;
+    line-height: 0.9em;
+
+    @include breakpoint(small down) {
+        font-size: 2.4em;
+    }
+}
+
+.title-s {
+    font-weight: 400;
+    font-size: 1.3em;
+    margin-top: 0.5em;
+  
+    @include breakpoint(medium down) {
+        margin-top: 0em;
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+}
+
+
+.feats-head {
+    color: $medium-gray;
+    font-size: 3em;
+    font-weight: 400;
+    padding: 26px 0 0;
+
+    @include breakpoint(medium down) {
+        text-align: center;
+    }
+
+    @include breakpoint(small down) {
+        font-size: 2em;
+    }
+}
+
+@include breakpoint(large) {
+    .feat-box:first-of-type {
+        margin-left: -15px;
+    }
+    .feat-box:last-of-type {
+        margin-right: -15px;
+    }
+}
+
+.feat-box img {
+    display: block;
+    margin: 0 auto;
+    max-width: 360px;
+
+    @include breakpoint(small down) {
+        max-width: 70%;
+    }
+}
+
+.feat-box p {
+    text-align: center;
+}
+
+.feat-tit-b {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    @include breakpoint(small down) {
+        font-size: 1.5em;
+    }
+}
+.feat-tit-s {
+	font-size: 1.4em;
+}
+
+
+
+

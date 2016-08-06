@@ -1,0 +1,18 @@
+---
+name: details
+url: /details/:id
+---
+
+
+<div ng-controller="myCtrl">
+    <p>First name: {{firstname}}</p>
+    <p>Loc: {{lastname}}</p>
+</div>
+<div ng-controller="detailsCrtl">
+  <ul>
+    <li ng-repeat="pro in project">
+      {{pro}} - <em>{{pro.done}}</em>
+      <a ui-sref="home">home</a>
+    </li>
+  </ul>
+</div>

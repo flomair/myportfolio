@@ -1,0 +1,58 @@
+---
+name: home
+url: /
+---
+<div ng-controller="myCtrl">
+    <p>First name: {{firstname}}</p>
+    <p>Loc: {{lastname}}</p>
+</div>
+<div ng-controller="allprojectsCtrl">
+    <ul>
+        <li ng-repeat="pro in projects.dets">
+            {{pro.name}} - <em>{{pro.done}}</em>
+            <a ui-sref="details({id:pro.id})">{{pro.name}}</a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <header class="header row">
+        <div class="logo small-2 column">
+            <img src="assets/img/uda.svg" srcset="assets/img/uda.svg" alt="Logo">
+        </div>
+        <div class="titlebox small-10 column">
+            <h1 class="title-b">Jane Doette</h1>
+            <p class="title-s">Front-end Ninja</p>
+        </div>
+    </header>
+    <section class="centerimg">
+        <img data-interchange="[assets/img/main-small.jpg, small],[assets/img/main-mid.jpg, medium],[assets/img/main-large.jpg, large]" srcset="assets/img/main-small.jpg 320w, assets/img/main-mid.jpg 640w, assets/img/main-large.jpg 1280w" src="assets/img/main-large.jpg" alt="HTML Code">
+    </section>
+    <section class="features">
+        <h2 class="feats-head">Featured Work</h2>
+        <div class="feats-box row align-justify small-up-1 medium-up-2 large-up-3" ng-controller="allprojectsCtrl">
+            <div class="feat-box column" ng-repeat="pro in projects.dets">
+                <img data-interchange="[assets/img/appify-small.jpg, small],[assets/img/appify-mid.jpg, medium],[assets/img/appify-large.jpg, retina]"
+                srcset="assets/img/appify-small.jpg 320w, assets/img/appify-mid.jpg 640w, assets/img/appify-large.jpg 2x" src="assets/img/appify-mid.jpg" alt="Appify">
+                <p class="feat-tit-b">{{pro.name}}</p>
+                <p class="feat-tit-s"><a ui-sref="details({id:pro.id})">{{pro.name}}</a></p>
+                <p class="feat-tit-s"><a href="https://github.com/udacity/appify">https://github.com/<wbr>udacity/appify</a>
+                </p>
+            </div>
+            <!--
+                <div class="feat-box column">
+                    <img data-interchange="[assets/img/sunflower-small.jpg, small],[assets/img/sunflower-mid.jpg, medium],[assets/img/sunflower-large.jpg, retina]" srcset="assets/img/sunflower-small.jpg 320w, assets/img/sunflower-mid.jpg 640w, assets/img/sunflower-large.jpg 2x" src="assets/img/sunflower-mid.jpg" alt="Sunflower">
+                    <p class="feat-tit-b">Sunflower</p>
+                    <p class="feat-tit-s"><a href="https://github.com/udacity/sunflower">https://github.com/<wbr>udacity/sunflower</a>
+                    </p>
+                </div>
+                <div class="feat-box column">
+                    <img data-interchange="
+                        [assets/img/bokeh-small.jpg, small],[assets/img/bokeh-mid.jpg, medium],[assets/img/bokeh-large.jpg, retina]" srcset="assets/img/bokeh-small.jpg 320w, assets/img/bokeh-mid.jpg 640w, assets/img/bokeh-large.jpg 2x" src="assets/img/bokeh-mid.jpg" alt="Bokeh">
+                    <p class="feat-tit-b">Bokeh</p>
+                    <p class="feat-tit-s"><a href="https://github.com/udacity/Bokeh">https://github.com/<wbr>udacity/Bokeh</a>
+                    </p>
+                </div>
+                -->
+        </div>
+    </section>
+</div>
