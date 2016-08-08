@@ -14,17 +14,21 @@ UNCSS_OPTIONS:
     - !!js/regexp .foundation-mq
     - !!js/regexp ^\.is-.*
 
+
 # Gulp will reference these paths when it copies files
 PATHS:
   # Path to dist folder
   dist: "dist"
   # Paths to static assets that aren't images, CSS, or JavaScript
   xlsx:
-    - "src/assets/data/*.{xlsx,xls}"
+    - "src/assets/data/projects3.xls"
+  imgs:
+    - "src/assets/img/*.jpg"
   assets:
     - "src/assets/**/*"
     - "!src/assets/{img,js,scss}/**/*"
-    - "!src/assets/data/*.{xlsx,xls}"
+    # "!src/assets/data/**/*"
+    - "src/assets/data/resolutions.json"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
